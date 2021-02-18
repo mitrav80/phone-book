@@ -15,6 +15,8 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
       console.log("Asynchronous read: " + data.toString());
    });
 });
-function mitra(){
-    console.log("hello");
+function removeFormList(){
+   alert ("Are you sure to remove ?");
+  var  remove = document.getElementById("delete");
+  remove.removeEventListener();
 }
