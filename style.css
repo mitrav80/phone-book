@@ -1,12 +1,15 @@
 body {
     background-color: rgb(104, 135, 146);
 }
+
 h1 {
     font-size: 50px;
 }
+
 label {
     font-size: 30px;
 }
+
 ::placeholder {
     color: rgb(221, 123, 128);
     font-size: 16px;
