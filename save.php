@@ -1,5 +1,7 @@
 <?php
-print_r($_POST);
-// $file = file_get_contents('input.txt');
-
-// print_r($files);
+if ($_POST) {
+    $text = json_encode($_POST);
+    $fs = fopen('input.txt', 'a');
+    fwrite($fs, $text);
+    fclose($fs);
+}
