@@ -10,7 +10,10 @@ $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) > 0) {
 
     echo " <link rel='stylesheet' href='style.css'>
-          <table calss ='orginal' border = '1'>
+
+        <script src='code.js'></script>
+        
+        <table id='table1' class ='orginal' border = '1'>
 
           <tr>
 
@@ -25,7 +28,7 @@ if (mysqli_num_rows($result) > 0) {
           </tr>";
 
  while($row = mysqli_fetch_assoc($result)) {
-    echo "<tr>";
+    echo "<tr id=$row[Phone]>";
 
     echo "<td>" . $row["Firstname"] . "</td>";
       
@@ -34,6 +37,12 @@ if (mysqli_num_rows($result) > 0) {
     echo "<td>" . $row['Phone'] . "</td>";
       
     echo "<td>" . $row['Email'] . "</td>";
+
+    echo "<td> <button onclick = 'removeFormList(this)' > Delete </button> </td>";
+
+    echo "<td> <button> Edit </button> </td>";
+
+
       
      echo "</tr>";
       

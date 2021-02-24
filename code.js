@@ -16,15 +16,17 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
    });
 });
 //delete button
-function removeFormList(){
-   alert ("Are you sure to remove ?");
-  var  remove = document.getElementById("delete");
-  remove.removeEventListener();
+function removeFormList(r){
+   console.log(r.parentNode.parentNode.id);
+   confirm ("Are you sure to remove ?");
+   var i = r.parentNode.parentNode.rowIndex;
+   document.getElementById("table1").deleteRow(i);
 }
+
 // add button
-function Additem(){
-   let Fname = document.getElementById("fname").value;
-   let Lname = document.getElementById("lname").value;
-   let Phone = document.getElementById("unit").value;
+//function Additem(){
+ //  let Fname = document.getElementById("fname").value;
+   // Lname = document.getElementById("lname").value;
+  // let Phone = document.getElementById("unit").value;
  
-}
+//}
