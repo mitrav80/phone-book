@@ -29,6 +29,20 @@ label {
      border-style: double;
 
  }
+
+ .orginal{
+     
+     border-style: double;
+     table-layout: unset;
+     font-style: italic;
+     font-size: 16px;
+     text-align: center;
+    
+ }
+ .header{
+     border-top: 1px;
+     background-color:turquoise;
+ }
  
 
  .button1 {

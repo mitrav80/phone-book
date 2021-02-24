@@ -9,19 +9,20 @@ $sql = "select * from phonebook.details";
 $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) > 0) {
 
-    echo "<table border='1'>
+    echo " <link rel='stylesheet' href='style.css'>
+          <table calss='orginal' border='1'>
 
-<tr>
+          <tr>
 
-<th>First Name</th>
+          <th class ='header'>First Name</th>
 
-<th>Last Name</th>
+          <th class ='header'>Last Name</th>
 
-<th>Phone Number</th>
+          <th class ='header'>Phone Number</th>
 
-<th>Email Adress</th>
+          <th class ='header'>Email Adress</th>
 
-</tr>";
+          </tr>";
 
  while($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
@@ -43,5 +44,6 @@ if (mysqli_num_rows($result) > 0) {
   } else {
     echo "0 results";
   }
+
 
 $connect->close();

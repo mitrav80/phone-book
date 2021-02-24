@@ -15,8 +15,16 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
       console.log("Asynchronous read: " + data.toString());
    });
 });
+//delete button
 function removeFormList(){
    alert ("Are you sure to remove ?");
   var  remove = document.getElementById("delete");
   remove.removeEventListener();
+}
+// add button
+function Additem(){
+   let Fname = document.getElementById("fname").value;
+   let Lname = document.getElementById("lname").value;
+   let Phone = document.getElementById("unit").value;
+ 
 }
