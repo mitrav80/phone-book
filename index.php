@@ -10,7 +10,7 @@ $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) > 0) {
 
     echo " <link rel='stylesheet' href='style.css'>
-          <table calss='orginal' border='1'>
+          <table calss ='orginal' border = '1'>
 
           <tr>
 
