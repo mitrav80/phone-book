@@ -110,3 +110,11 @@ label {
 
  }
  
+
+.dont_show {
+    display: none;
+}
+
+.show {
+    display: block;
+}

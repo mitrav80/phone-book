@@ -40,7 +40,7 @@ if (mysqli_num_rows($result) > 0) {
 
     echo "<td> <button onclick = 'removeFormList(this)' > Delete </button> </td>";
 
-    echo "<td> <button> Edit </button> </td>";
+    echo "<td> <button onclick = 'editList(this)' > Edit </button> </td>";
 
 
       
@@ -48,11 +48,20 @@ if (mysqli_num_rows($result) > 0) {
       
         }
       
-      echo "</table>";
+      echo "</table><br><br>";
 
   } else {
     echo "0 results";
   }
+
+echo " <div id='formEdit' class='dont_show'> 
+         First Name: <input type='text' name='fname' id='fname'><br><br>
+         last Name: <input type='text' name='lname' id='lname'><br><br>
+          Phone Number: <input type='text' name='phone' id='phone'><br><br>
+          Email: <input type='text' name='email' id='email'><br><br>
+          <button onclick='updateList()' type=submit id='update'>Update</button>
+
+      </div> ";
 
 
 $connect->close();
