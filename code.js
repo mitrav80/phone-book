@@ -33,7 +33,7 @@ function editList(){
 
      }
    
-     var table=document.getElementById("details"),rIndex;
+     var table=document.getElementById("details").rIndex;
      for (i=1; i<table.row.length; i++ ){
         rIndex=this.rowIndex;
 
@@ -43,12 +43,15 @@ function editList(){
      document.getElementById("phone").value= this.cells[2].innerHTML;
      document.getElementById("email").value= this.cells[3].innerHTML;
 
-    };
+    }
+   }
+   function updateList()
+   {
 
-    table.rows[rIndex].cells[0].innerHTML = Document.getElementById("fname");
-    table.rows[rIndex].cells[1].innerHTML = Document.getElementById("lname");
-    table.rows[rIndex].cells[2].innerHTML = Document.getElementById("phone");
-    table.rows[rIndex].cells[3].innerHTML = Document.getElementById("email");
+    table.rows[rIndex].cells[0].innerHTML = Document.getElementById("fname").value;
+    table.rows[rIndex].cells[1].innerHTML = Document.getElementById("lname").value;
+    table.rows[rIndex].cells[2].innerHTML = Document.getElementById("phone").value;
+    table.rows[rIndex].cells[3].innerHTML = Document.getElementById("email").value;
    };
 
 
