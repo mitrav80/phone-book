@@ -16,6 +16,7 @@ if (mysqli_num_rows($result) > 0) {
         <table id='table1' class ='orginal' border = '1'>
 
           <tr>
+          <th class ='header'>ID</th> 
 
           <th class ='header'>First Name</th>
 
@@ -28,7 +29,11 @@ if (mysqli_num_rows($result) > 0) {
           </tr>";
 
  while($row = mysqli_fetch_assoc($result)) {
-    echo "<tr id=$row[Phone]>";
+
+    echo "<tr id=$row[ID]>";
+
+    echo "<td>" . $row["ID"] . "</td>";
+    
 
     echo "<td>" . $row["Firstname"] . "</td>";
       
@@ -40,7 +45,7 @@ if (mysqli_num_rows($result) > 0) {
 
     echo "<td> <button onclick = 'removeFormList(this)' > Delete </button> </td>";
 
-    echo "<td> <button onclick = 'editList(this)' > Edit </button> </td>";
+    echo "<td> <button onclick = 'editList($row[ID])' > Edit </button> </td>";
 
 
       
@@ -55,11 +60,12 @@ if (mysqli_num_rows($result) > 0) {
   }
 
 echo " <div id='formEdit' class='dont_show'> 
-         First Name: <input type='text' name='fname' id='fname'><br><br>
-         last Name: <input type='text' name='lname' id='lname'><br><br>
+          ID: <lable  name='fname' id='id'><br><br>   
+          First Name: <input type='text' name='fname' id='fname'><br><br>
+          last Name: <input type='text' name='lname' id='lname'><br><br>
           Phone Number: <input type='text' name='phone' id='phone'><br><br>
           Email: <input type='text' name='email' id='email'><br><br>
-          <button onclick='updateList()' type=submit id='update'>Update</button>
+          <button onclick='updateList()' id='update'>Update</button>
 
       </div> ";
 

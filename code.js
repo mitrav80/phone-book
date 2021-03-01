@@ -24,34 +24,51 @@ function removeFormList(r){
    document.getElementById("table1").deleteRow(i);
 } 
 }
-function editList(){
+function editList(edit){
       var x = document.getElementById("formEdit");
       if (x.style.display === "") {
        x.classList.toggle("show");
       } else {
        x.classList.toggle("dont_show");
 
-     }
+      }
+      // console.log(edit);
    
-     var table=document.getElementById("details").rIndex;
-     for (i=1; i<table.row.length; i++ ){
-        rIndex=this.rowIndex;
+     var table=document.getElementById(edit);
+     console.log(table.cells.length);
+   //   for (i=0; i<table.cells.length; i++ ){
+   //      //rIndex=this.rowIndex;
+   //      console.log(table.cells[i].innerHTML);
 
 
-     document.getElementById("fname").value= this.cells[0].innerHTML;
-     document.getElementById("lname").value= this.cells[1].innerHTML;
-     document.getElementById("phone").value= this.cells[2].innerHTML;
-     document.getElementById("email").value= this.cells[3].innerHTML;
+    
+     document.getElementById("id").value= table.cells[0].innerHTML;
+     document.getElementById("fname").value= table.cells[1].innerHTML;
+     document.getElementById("lname").value= table.cells[2].innerHTML;
+     document.getElementById("phone").value= table.cells[3].innerHTML;
+     document.getElementById("email").value= table.cells[4].innerHTML;
 
-    }
+   //  }
    }
+
    function updateList()
    {
+   var id = document.getElementById('id').value
+   var table=document.getElementById(id);
+    console.log(id);
+    console.log(table);
+    table.cells[0].innerHTML = document.getElementById("fname").value;
+    table.cells[1].innerHTML = document.getElementById("fname").value;
+    table.cells[2].innerHTML = document.getElementById("lname").value;
+    table.cells[3].innerHTML = document.getElementById("phone").value;
+    table.cells[4].innerHTML = document.getElementById("email").value;
+    var x = document.getElementById("formEdit");
+      if (x.style.display === "") {
+       x.classList.toggle("show");
+      } else {
+       x.classList.toggle("dont_show");
 
-    table.rows[rIndex].cells[0].innerHTML = Document.getElementById("fname").value;
-    table.rows[rIndex].cells[1].innerHTML = Document.getElementById("lname").value;
-    table.rows[rIndex].cells[2].innerHTML = Document.getElementById("phone").value;
-    table.rows[rIndex].cells[3].innerHTML = Document.getElementById("email").value;
+      }
    };
 
 
