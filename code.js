@@ -57,7 +57,7 @@ function editList(edit){
    var table=document.getElementById(id);
     console.log(id);
     console.log(table);
-    table.cells[0].innerHTML = document.getElementById("fname").value;
+    table.cells[0].innerHTML = document.getElementById("id").value;
     table.cells[1].innerHTML = document.getElementById("fname").value;
     table.cells[2].innerHTML = document.getElementById("lname").value;
     table.cells[3].innerHTML = document.getElementById("phone").value;
@@ -70,6 +70,16 @@ function editList(edit){
 
       }
    };
+   function backButton()
+      {
+         window.history.back();
+      
+   }
+
+   function backToAdd(){
+      location.href ="http://localhost/mitra/phone-book/add.html";
+   }
+
 
 
 // add button

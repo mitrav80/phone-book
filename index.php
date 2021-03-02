@@ -43,11 +43,11 @@ if (mysqli_num_rows($result) > 0) {
       
     echo "<td>" . $row['Email'] . "</td>";
 
-    echo "<td> <button onclick = 'removeFormList(this)' > Delete </button> </td>";
+    echo "<td> <button onclick = 'removeFormList(this)' class='remove' > Delete </button> </td>";
 
-    echo "<td> <button onclick = 'editList($row[ID])' > Edit </button> </td>";
+    echo "<td> <button onclick = 'editList($row[ID])' class='edit' > Edit </button> </td>";
 
-
+    
       
      echo "</tr>";
       
@@ -58,14 +58,16 @@ if (mysqli_num_rows($result) > 0) {
   } else {
     echo "0 results";
   }
+  echo " <button onclick ='backToAdd()' class='addnew'> Addnew </button> </td>";
+
 
 echo " <div id='formEdit' class='dont_show'> 
-          ID: <lable  name='fname' id='id'><br><br>   
+          ID: <input type='text' id='id' name='ID' readonly><br><br>   
           First Name: <input type='text' name='fname' id='fname'><br><br>
           last Name: <input type='text' name='lname' id='lname'><br><br>
           Phone Number: <input type='text' name='phone' id='phone'><br><br>
           Email: <input type='text' name='email' id='email'><br><br>
-          <button onclick='updateList()' id='update'>Update</button>
+          <button onclick='updateList()' id='update' class='update1'>Update</button>
 
       </div> ";
 

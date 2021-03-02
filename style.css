@@ -118,3 +118,39 @@ label {
 .show {
     display: block;
 }
+ .remove{
+     background-color:deeppink;
+     border:thick;
+     text-align: center;
+     text-decoration:underline;
+     font-size: 13px;
+     cursor: pointer;
+     border-radius: 3px;
+     margin: 8px 2px;
+     font-style:italic;
+ }
+ .edit{
+    background-color:mediumturquoise;
+    border:thick;
+    text-align: center;
+    text-decoration:underline;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 8px 2px;
+    font-style:italic;
+ }
+
+ .update1{
+    background-color: #211f7e;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 2px;
+    cursor: pointer;
+
+ }
