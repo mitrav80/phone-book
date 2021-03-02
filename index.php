@@ -43,7 +43,7 @@ if (mysqli_num_rows($result) > 0) {
       
     echo "<td>" . $row['Email'] . "</td>";
 
-    echo "<td> <button onclick = 'removeFormList(this)' class='remove' > Delete </button> </td>";
+    echo "<td> <button onclick = 'removeFormList(this,$row[ID])' class='remove' > Delete </button> </td>";
 
     echo "<td> <button onclick = 'editList($row[ID])' class='edit' > Edit </button> </td>";
 

@@ -16,12 +16,21 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
    });
 });
 //delete button
-function removeFormList(r){
+function removeFormList(r,id){
   // console.log(r.parentNode.parentNode.id);
   var e = confirm ("Are you sure to remove ?");
   if (e == true) {
    var i = r.parentNode.parentNode.rowIndex;
-   document.getElementById("table1").deleteRow(i);
+   var xhttp = new XMLHttpRequest();
+   
+   xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("table1").deleteRow(i);
+      }
+   };
+   xhttp.open("POST", "del.php", true);
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   xhttp.send("id="+id);
 } 
 }
 function editList(edit){
