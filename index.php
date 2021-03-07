@@ -63,10 +63,10 @@ if (mysqli_num_rows($result) > 0) {
 
 echo " <div id='formEdit' class='dont_show'> 
           ID: <input type='text' id='id' name='ID' readonly><br><br>   
-          First Name: <input type='text' name='fname' id='fname'><br><br>
-          last Name: <input type='text' name='lname' id='lname'><br><br>
-          Phone Number: <input type='text' name='phone' id='phone'><br><br>
-          Email: <input type='text' name='email' id='email'><br><br>
+          First Name: <input type='text' name='fname' id='fname' required><br><br>
+          last Name: <input type='text' name='lname' id='lname' required><br><br>
+          Phone Number: <input type='text' name='phone' id='phone' required><br><br>
+          Email: <input type='text' name='email' id='email' required><br><br>
           <button onclick='updateList()' id='update' class='update1'>Update</button>
 
       </div> ";

@@ -1,9 +1,20 @@
 body {
     background-color: rgb(104, 135, 146);
-}
+    margin:0rem;
+
+    
+    }
 
 h1 {
-    font-size: 50px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-top: 30px;
+
 }
 
 label {
@@ -21,16 +32,24 @@ label {
     text-align: center;
     border-radius: 5px;
     border-style: double;
-    padding: 5px 20px;
-    height: fit-content;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 90px;
+    margin-left: 90px;
+    
+    
     
  }
 
  .button-container{
-     background-color:gray;
-     border-style: double;
+    background-color:gray;
+    border-style: double;
+    padding:5px 20px;
+    margin-left: 220px;
+    margin-right:  220px;
+    margin-bottom: 80px;
 
- }
+}
 
  .orginal {
      

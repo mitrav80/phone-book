@@ -11,20 +11,20 @@
      <div class="create1">
          <form action="save.php" method="POST">
              <label>First name :</label>
-             <input type="text" id="fname"  name="FirstName" placeholder="Enter firstname"  ><br><br>
+             <input type="text" id="fname"  name="FirstName" placeholder="Enter firstname" required  ><br><br>
              <label>Last name :</label>
-             <input type="text" id="lname" name="LastName" placeholder="Enter lastname" ><br><br>
+             <input type="text" id="lname" name="LastName" placeholder="Enter lastname" required><br><br>
              <label>Phone Number :</label>
-             <input type="text" id="phone" name="phone" placeholder="Enter phone" ><br><br>
+             <input type="text" id="phone" name="phone" placeholder="Enter phone" required ><br><br>
              <label>Email Adress :</label>
-             <input type="text" id="Email" name="Email" placeholder="Enter Email" ><br><br>
+             <input type="text" id="Email" name="Email" placeholder="Enter Email"  required><br><br>
             <div class="button-container">
                 <button class="button1" id="AddNew" type="submit" >save</button>
-               
+                <button onclick="backButton()" class="button2" id="Back">Back</button>
                 
             </div>
         </form>
-        <button onclick="backButton()" class="button2" id="Back">Back</button>
+        
     </div>
     <script src= "code.js"></script>
 </body>

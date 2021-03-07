@@ -18,6 +18,8 @@ if ($_POST['Email']) {
     $email = $_POST['Email'];
 }
 
+if  ($firstname && $lastname && $phone && $email ){
+
 
 $connect = mysqli_connect('localhost','root', '');
 
@@ -36,6 +38,8 @@ if(mysqli_query($connect, $sql)){
 }
 
 $connect->close();
+
+}
 header("Location: http://localhost/mitra/phone-book/");
 ?>
 
