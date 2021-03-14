@@ -5,6 +5,8 @@ if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
   }
   
+  echo "<input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>"
+  
 $sql = "select * from phonebook.details";
 $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result) > 0) {

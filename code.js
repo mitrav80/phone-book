@@ -89,12 +89,24 @@ function editList(edit){
       location.href ="http://localhost/mitra/phone-book/add.html";
    }
 
+   (function(document) {
+      'use strict';
+
+      var TableFilter = (function(myArray) {
+          var search_input;
+
+          function _onInputSearch(e) {
+              search_input = e.target;
+              var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+              myArray.forEach.call(tables, function(table) {
+                  myArray.forEach.call(table.tBodies, function(tbody) {
+                      myArray.forEach.call(tbody.rows, function(row) {
+                          var text_content = row.textContent.toLowerCase();
+                          var search_val = search_input.value.toLowerCase();
+                          row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                      });
+                  });
+              });
+          }
 
 
-// add button
-//function Additem(){
- //  let Fname = document.getElementById("fname").value;
-   // Lname = document.getElementById("lname").value;
-  // let Phone = document.getElementById("unit").value;
- 
-//}
