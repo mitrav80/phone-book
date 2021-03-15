@@ -1,11 +1,16 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
 <?php
 $connect = mysqli_connect('localhost','root', '');
 
 if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
   }
-  
-  echo "<input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>"
+  echo "<br><br>";
+  echo "<input type='search' placeholder='Search...' class='form-control search-input'  id = 'search' /><br><br>";
   
 $sql = "select * from phonebook.details";
 $result = mysqli_query($connect, $sql);
@@ -75,3 +80,8 @@ echo " <div id='formEdit' class='dont_show'>
 
 
 $connect->close();
+?>
+    <script src= "code.js"></script>
+
+</body>
+</html>
