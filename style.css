@@ -135,6 +135,8 @@ label {
 
 .dont_show {
     display: none;
+    position: absolute;
+    left: 30px;
 }
 
 .show {
@@ -177,7 +179,7 @@ label {
     align-content: right;
 
  }
-.addnew{
+.addnew {
     background-color: #211f7e;
     border-radius: 5px;
     color: white;
@@ -186,10 +188,17 @@ label {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 8px 2px;
-    cursor: pointer;
-    align-content: right;
-   
+    position: absolute;
+    top:370px;
+    left: 1200px;
     
 
+}
+
+.search-input {
+    font-size: 16px;
+    left:30px;
+    position: absolute;
+    background-color:dimgray;
+    
 }

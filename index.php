@@ -9,8 +9,8 @@ $connect = mysqli_connect('localhost','root', '');
 if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
   }
-  echo "<br><br>";
-  echo "<input type='search' placeholder='Search...' class='form-control search-input'  id = 'search' /><br><br>";
+  echo " <br><br>";
+  echo " <input type='search' onchange='search(this.value)'  placeholder='Search...' class='search-input'  id = 'search' /> <br> <br>";
   
 $sql = "select * from phonebook.details";
 $result = mysqli_query($connect, $sql);

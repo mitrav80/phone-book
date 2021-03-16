@@ -109,18 +109,22 @@ function search() {
               });
           }
       });
-      document.getElementById("search").innerHTML = search();
-   }function search() {
-      // Declare variables
-      var input, filter, table, tr, td, i;
-      input = document.getElementById("search");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("details");
+    }
+      //document.getElementById("search").innerHTML = search();
+   
+   
+   function search(element) {
+     console.log(element);
+     
+     // Declare variables
+      var element, filter, table, tr, td, i;
+      filter = element.toUpperCase();
+      table = document.getElementById("table1");
       tr = table.getElementsByTagName("tr");
     
-      // Loop through all table rows, and hide those who don't match the search query
+     // Loop through all table rows, and hide those who don't match the search query
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
           if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
